@@ -1,1 +1,6 @@
 Machine Learning a part of  Data Science.
+Standard Machine Learning has two parts:
+1) Supervised Learning
+2) Unsupervised learning
+3) Reinforcement Learning
+We should have a knowledge of Mathematics to learn machine learning:- Statistics, linear algebra, Probability, Differential calculas(optimization algorithm), Permutation & combinations
