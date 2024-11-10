@@ -1,1 +1,7 @@
 Latest version of MySQL is 8.0.40
+SQL is a programming language, structured query language and MYSQL is a app for running this language.
+Username of Mysql is default is root . we can not change it.
+Password which i set for it is Manoj@190320
+Coding in mysql always end with semicolon (;)
+By default it has 6 databases.
+Shortcut to execute the code - Ctrl+enter
