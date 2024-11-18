@@ -1,0 +1,15 @@
+Excel latest version:- Excel365
+Addition:- =sum(select cells)
+Flash fill is done by tapping at right lower corner.
+Referencing of cells:- Instead of passing the values directly, we are using cells that contains values.
+Two types of referencing: Relative referencing, partial referencing, & Absolute referencing. In absolute referencing, we freeze the cells. In partial referencing, we  freeze either row or column of the cell.
+To feeeze the cell, press f4. Dollar sign s is of freeze. To freeze whole, press f4 one time, if wanna freeze partially, press f4 two times.
+Power function: Formula =POWER(Number, Power)
+Exponential function: e raise to power b, e is approx 2.71 & it is universal constant, Formula =exp(cell address)
+Tab key is used to activate the function
+Multiplication: =product(select cells or write values)
+Subtraction & division: There is no formula of them in any of the tool.
+BODMAS: Order of precedence for operation in mathematics.
+Full form of BODMAS:- Brackets/Order;off/Division/Multiplication/Addition/Subtraction
+
+
