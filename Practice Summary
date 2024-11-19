@@ -1,0 +1,51 @@
+:::::::::::::::::::::::::::::::::::::::::::::::::::::
+n = 18
+
+if n % 2 != 0:
+    print("Weird")  # This runs if n is odd
+elif 2 <= n <= 5:
+    print("Not Weird")  # This runs if n is even and between 2 and 5
+elif 6 <= n <= 20:
+    print("Weird")  # This runs if n is even and between 6 and 20
+else:
+    print("Not Weird")  # This runs if n is even and greater than 20
+
+Above Code explaination::::::::::::::
+% is the modulo operator, which gives the remainder of a division.
+!= is the not equal operator, used to compare two values to see if they are different.
+In your code, n % 2 != 0 checks if n is odd.
+
+if: Starts a condition check. If the condition is True, it executes the code block following it.
+elif: Provides additional conditions to check if the if condition is False. You can have multiple elif blocks.
+else: Executes a block of code if none of the previous if or elif conditions were True
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+
+1. if __name__ == '__main__':
+__name__ is a special built-in variable in Python. It is automatically set to the string '__main__' when the Python script is executed directly (i.e., when you run the script from the command line or an IDE).
+If the script is being imported into another script (as a module), __name__ is set to the name of the script/module (not '__main__').
+The condition if __name__ == '__main__': checks whether the script is being executed directly (as opposed to being imported). If it is running directly, the code inside the if block will execute. If the script is being imported, this block of code will not run.
+
+2. a = int(input()) and b = int(input())
+input() is a Python function that reads a line of input from the user. By default, it returns the input as a string.
+int() is used to convert the string input into an integer.
+So:
+
+a = int(input()) prompts the user for input and converts the input into an integer, assigning it to the variable a.
+b = int(input()) does the same for the variable b.
+
+
+Why Use if __name__ == '__main__':?
+This construct is useful when you want to write code that can be reused both as a standalone script or as part of a module.
+Code inside the if __name__ == '__main__': block will only execute when the script is run directly, but won't execute if the script is imported as a module into another script.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+The expression a // b in Python represents integer division (also known as floor division). It divides a by b and returns the quotient without the remainder, essentially rounding down the result to the nearest integer.
+The // operator performs integer division, meaning it discards the fractional part and only returns the whole number part of the division result.
+For example:
+
+5 // 2 results in 2 because 5 / 2 = 2.5, and the // operator removes the decimal part, leaving 2.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
