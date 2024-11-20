@@ -143,15 +143,38 @@ Explanation 0
 1990 is not a multiple of 4 hence it's not a leap year.
 
 def is_leap(year):
-    leap = False
-    
-    # Write your logic here
-    if year % 4 != 0:
-        leap = False
-    elif year % 400 != 0:
-        leap = False
-    elif year % 100 != 0:
-        leap = True
-    return leap
+    # If divisible by 400, it's a leap year
+    if year % 400 == 0:
+        return True
+    # If divisible by 100 but not 400, it's not a leap year
+    elif year % 100 == 0:
+        return False
+    # If divisible by 4 but not 100, it's a leap year
+    elif year % 4 == 0:
+        return True
+    # Otherwise, it's not a leap year
+    else:
+        return False
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-In else and elif , if in last return is mentioned, then we write if and elif , if not then we write else at last.
+The most straightforward approach is to use a loop to print the integers directly without spaces. We can use the end parameter of the print() function to avoid adding a newline or space after each integer.
+
+Here’s the code:
+
+n = int(input())  # Read the integer input
+
+for i in range(1, n + 1):  # Loop from 1 to n (inclusive)
+    print(i, end='')  # Print each number without adding a space or newline
+Explanation:
+input() reads the input, which is converted to an integer using int().
+range(1, n + 1) generates numbers from 1 to n.
+print(i, end='') prints each number in the sequence without a newline (end='' ensures no space or newline is added after each number).
+Example Walkthrough:
+Sample Input:
+3
+Output:
+123
+We start from 1 and go up to 3. The numbers 1, 2, and 3 are printed consecutively without spaces between them, resulting in the string 123.
+Notes:
+The use of end='' in the print() function is critical here. It tells Python not to append the default newline or space after each printed value, which would be the usual behavior of print().
+
