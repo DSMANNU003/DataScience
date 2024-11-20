@@ -49,3 +49,109 @@ For example:
 
 5 // 2 results in 2 because 5 / 2 = 2.5, and the // operator removes the decimal part, leaving 2.
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+. Primitive Data Types (Basic Types)
+These are the most basic types of data and are provided by almost all programming languages. Examples include:
+
+Integer (int): Whole numbers (positive, negative, or zero) without decimals. Example: 5, -3, 0
+Floating-point (float): Numbers that have a decimal point. Example: 3.14, -0.001, 2.0
+Character (char): A single character or symbol. Example: 'a', 'A', '%'
+String (str): A sequence of characters. Example: "hello", "123"
+Boolean (bool): A type that represents truth values: True or False.
+Null (None in Python, null in JavaScript, nil in Ruby, etc.): Represents the absence of a value.
+
+2. Composite (Non-Primitive) Data Types
+These are more complex types, constructed from primitive types or other composite types.
+
+Array: A collection of elements of the same type stored in contiguous memory locations. Example: [1, 2, 3] (in languages like Python, C, Java)
+List: An ordered collection of items that can be of different types (in languages like Python, JavaScript, etc.). Example: [1, "hello", True]
+Tuple: Similar to a list, but immutable (unchangeable). Example: (1, 2, 3)
+Set: A collection of unique items. Example: {1, 2, 3}
+Dictionary (or HashMap): A collection of key-value pairs. Example: {"name": "John", "age": 30}
+3. Abstract Data Types (ADT)
+These are data types that are defined by a set of operations rather than a specific implementation.
+
+Stack: A collection that follows the Last In, First Out (LIFO) principle. Operations are push, pop, and peek.
+Queue: A collection that follows the First In, First Out (FIFO) principle. Operations are enqueue, dequeue.
+Linked List: A linear collection of elements, where each element points to the next one.
+Tree: A hierarchical collection of nodes, often used to represent relationships like family trees or file systems.
+Graph: A set of nodes connected by edges, useful in representing networks or connections.
+
+4. User-Defined Data Types
+These are data types created by the programmer using primitive or other composite types.
+
+Classes: A blueprint for creating objects (instances). A class defines properties and behaviors (methods) of objects. Example (in Python):
+python
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+Structures (in C/C++): A way to group different data types together. Example:
+
+struct Person {
+    char name[50];
+    int age;
+};
+5. Enumerated Types (Enums)
+These are a special kind of data type that represents a set of named values. For example, days of the week, or states of an application.
+
+Example (in C):
+
+enum Day { Monday, Tuesday, Wednesday, Thursday, Friday };
+6. Specialized Data Types
+Pointer (in languages like C/C++): A variable that holds the memory address of another variable.
+File: Represents files, allowing reading and writing data to a file. Common in languages like Python, C, Java.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+An extra day is added to the calendar almost every four years as February 29, and the day is called a leap day. It corrects the calendar for the fact that our planet takes approximately 365.25 days to orbit the sun. A leap year contains a leap day.
+
+In the Gregorian calendar, three conditions are used to identify leap years:
+
+The year can be evenly divided by 4, is a leap year, unless:
+The year can be evenly divided by 100, it is NOT a leap year, unless:
+The year is also evenly divisible by 400. Then it is a leap year.
+This means that in the Gregorian calendar, the years 2000 and 2400 are leap years, while 1800, 1900, 2100, 2200, 2300 and 2500 are NOT leap years. Source
+
+Task
+
+Given a year, determine whether it is a leap year. If it is a leap year, return the Boolean True, otherwise return False.
+
+Note that the code stub provided reads from STDIN and passes arguments to the is_leap function. It is only necessary to complete the is_leap function.
+
+Input Format
+
+Read , the year to test.
+
+Constraints
+
+
+Output Format
+
+The function must return a Boolean value (True/False). Output is handled by the provided code stub.
+
+Sample Input 0
+
+1990
+Sample Output 0
+
+False
+
+Explanation 0
+
+1990 is not a multiple of 4 hence it's not a leap year.
+
+def is_leap(year):
+    leap = False
+    
+    # Write your logic here
+    if year % 4 != 0:
+        leap = False
+    elif year % 400 != 0:
+        leap = False
+    elif year % 100 != 0:
+        leap = True
+    return leap
+
+In else and elif , if in last return is mentioned, then we write if and elif , if not then we write else at last.
